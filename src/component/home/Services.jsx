@@ -10,6 +10,7 @@ import {
   Zap,
 } from "lucide-react";
 import { useState } from "react";
+import ScrollSatellite from "../animation/ScrollSatellite"
 
 export default function Services() {
   const services = [
@@ -50,6 +51,10 @@ export default function Services() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
+    <div className="relative">
+    
+    <ScrollSatellite />
+    
     <section
       id="services"
       className="w-full min-h-screen flex flex-col items-center justify-center px-[5vw] py-[10vh] relative overflow-hidden"
@@ -149,6 +154,8 @@ export default function Services() {
         </div>
       </div>
     </section>
+    </div>
+
   );
 }
 

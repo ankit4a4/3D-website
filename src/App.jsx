@@ -13,7 +13,6 @@ import Hero from "./component/home/HeroSection";
 function App() {
   return (
     <Router>
-      <ScrollVideo />
       <Header />
       <Hero />
       <AboutUs />

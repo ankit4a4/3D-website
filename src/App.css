@@ -12,3 +12,11 @@
 .animate-spin-slow {
   animation: spin-slow 20s linear infinite;
 }
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('/backgroundGIF.gif') no-repeat center center fixed;
+  background-size: cover;
+}

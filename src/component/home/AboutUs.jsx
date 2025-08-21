@@ -1,5 +1,9 @@
+import ScrollAstronaut from "../animation/ScrollAstronaut";
+
 export default function AboutUs() {
   return (
+    <>
+<ScrollAstronaut />    
     <section
       id="about"
       className="w-full min-h-[100vh] flex items-center justify-center px-[4vw] py-[6vh] relative overflow-hidden"
@@ -71,66 +75,10 @@ export default function AboutUs() {
         </div>
 
         {/* Center Column - Animated Graphic */}
-        <div className="flex items-center justify-center relative">
+        <div className=" hidden md:flex items-center justify-center relative">
           <div className="relative w-[60vh] h-[60vh] md:w-[35vw] md:h-[35vw] max-w-full flex items-center justify-center">
             {/* Outer circle */}
-            <div className="absolute w-[80%] h-[80%] border-[0.5vh] md:border-[0.4vw] border-[#3298c9]/30 rounded-full animate-pulse-slow"></div>
 
-            {/* Middle circle */}
-            <div className="absolute w-[60%] h-[60%] border-[0.5vh] md:border-[0.4vw] border-[#3298c9]/30 rounded-full animate-spin-slow"></div>
-
-            {/* Inner circle with icon */}
-            <div className="absolute w-[40%] h-[40%] bg-[#3298c9] rounded-full flex items-center justify-center shadow-lg">
-              <svg
-                className="w-[50%] h-[50%] text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                ></path>
-              </svg>
-            </div>
-
-            {/* Floating elements */}
-            <div className="absolute -top-[1vh] left-[8vw] w-[6vh] h-[6vh] md:w-[3vw] md:h-[3vw] bg-white rounded-lg shadow-md flex items-center justify-center animate-float">
-              <svg
-                className="w-[4vh] h-[4vh] md:w-[2vw] md:h-[2vw] text-[#3298c9]"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                ></path>
-              </svg>
-            </div>
-
-            <div className="absolute -bottom-[1vh] right-[8vw] w-[6vh] h-[6vh] md:w-[3vw] md:h-[3vw] bg-white rounded-lg shadow-md flex items-center justify-center animate-float-reverse">
-              <svg
-                className="w-[4vh] h-[4vh] md:w-[2vw] md:h-[2vw] text-[#3298c9]"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                ></path>
-              </svg>
-            </div>
           </div>
         </div>
 
@@ -189,5 +137,8 @@ export default function AboutUs() {
         .animate-float-reverse{animation:float-reverse 4s ease-in-out infinite;}
       `}</style>
     </section>
+
+    </>
+
   );
 }
