@@ -1,15 +1,8 @@
 "use client";
-import { useEffect, useRef } from "react";
 import { Star } from "lucide-react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import backgroundImage from "../../../public/space-removebg-preview.png";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function Testimonials() {
-  const imageRef = useRef(null);
-
   const testimonials = [
     {
       name: "Ravi Sharma",
@@ -25,23 +18,14 @@ export default function Testimonials() {
         "Their SMM campaigns gave us 3x engagement on Instagram and Facebook. Our brand visibility improved a lot.",
       rating: 5,
     },
+    {
+      name: "Amit Verma",
+      role: "Local Business",
+      feedback:
+        "They helped us rank in the top 3 results on Google Maps. Got more local customers than ever before.",
+      rating: 4,
+    },
   ];
-
-  useEffect(() => {
-    gsap.fromTo(
-      imageRef.current,
-      { scale: 1 },
-      {
-        scale: 1.2, // kitna zoom karna hai
-        scrollTrigger: {
-          trigger: "#testimonials",
-          start: "top 80%", // jab section viewport me 80% aaye
-          end: "bottom 20%", // scroll ka end
-          scrub: true, // smooth animation
-        },
-      }
-    );
-  }, []);
 
   return (
     <section
@@ -97,15 +81,7 @@ export default function Testimonials() {
         ))}
       </div>
 
-      {/* Bottom Right Image */}
-      <div className="absolute bottom-0 right-0 w-[20vw] md:w-[30vw] opacity-80 z-0 pointer-events-none">
-        <img
-          ref={imageRef}
-          src={backgroundImage}
-          alt="Space Background"
-          className="object-contain"
-        />
-      </div>
+    
     </section>
   );
 }

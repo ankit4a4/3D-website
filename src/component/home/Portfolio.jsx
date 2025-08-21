@@ -1,6 +1,7 @@
 "use client";
 import { TrendingUp, Share2 } from "lucide-react";
-import gifImage from "../../../public/backgroudn123456.gif";
+import Lottie from "lottie-react";
+import portfolioAnimation from "../animation/Space walker boy.json"; // yaha apna JSON animation ka path dein
 
 export default function Portfolio() {
   const projects = [
@@ -42,15 +43,16 @@ export default function Portfolio() {
     <section
       id="portfolio"
       className="w-full min-h-screen px-[4vw] py-[10vh] md:py-[12vh] relative"
-      style={{
-        backgroundImage: `url(${gifImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
     >
-      {/* Overlay for better readability */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      {/* Lottie Background */}
+      <div className="absolute inset-0">
+        <Lottie
+          animationData={portfolioAnimation}
+          loop={true}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60"></div> {/* Overlay */}
+      </div>
 
       {/* Section Content */}
       <div className="relative z-10">
@@ -62,35 +64,28 @@ export default function Portfolio() {
           <h2 className="text-[5vh] md:text-[3vw] font-bold text-white mt-[2vh]">
             SEO & <span className="text-[#3298c9]">SMM Portfolio</span>
           </h2>
-          <p className="text-[2.5vh] md:text-[1.2vw] text-gray-300  mx-auto mt-[2.5vh]">
+          <p className="text-[2.5vh] md:text-[1.2vw] text-gray-300 mx-auto mt-[2.5vh]">
             Some of our successful SEO & Social Media Marketing case studies
             that delivered proven results.
           </p>
         </div>
 
         {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-[5vh]  mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-[5vh] mx-auto">
           {projects.map((project, i) => (
             <div
               key={i}
               className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-lg p-[5vh] hover:shadow-2xl transition-all duration-300 flex flex-col group"
             >
-              {/* Icon */}
               <div className="mb-[3vh]">{project.icon}</div>
-
-              {/* Title */}
               <h3 className="text-[2.8vh] md:text-[1.5vw] font-bold text-white mb-[2vh] group-hover:text-[#3298c9] transition">
                 {project.title}
               </h3>
-
-              {/* Category */}
               <span
                 className={`inline-block px-[2.5vh] py-[1.5vh] rounded-full text-[2vh] md:text-[1vw] font-medium mb-[3vh] bg-[#3298c9]/20 text-[#fff]`}
               >
                 {project.category}
               </span>
-
-              {/* Description */}
               <p className="text-[2.2vh] md:text-[1.1vw] text-gray-200 flex-grow">
                 {project.desc}
               </p>

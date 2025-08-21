@@ -53,7 +53,6 @@ export default function Services() {
   return (
     <div className="relative">
     
-    <ScrollSatellite />
     
     <section
       id="services"
