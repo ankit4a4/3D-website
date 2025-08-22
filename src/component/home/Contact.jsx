@@ -1,5 +1,7 @@
 "use client";
 import { Mail, Phone, MapPin } from "lucide-react";
+import Lottie from "lottie-react";
+import portfolioAnimation from "../animation/Space walker boy.json"; // yaha apna JSON animation ka path dein
 
 export default function Contact() {
   return (
@@ -7,6 +9,10 @@ export default function Contact() {
       id="contact"
       className="w-full min-h-screen px-[4vw] py-[10vh] md:py-[12vh] relative"
     >
+
+      
+
+
       {/* Section Header */}
       <div className="text-center mb-[7vh]">
         <span className="text-[#3298c9] font-semibold text-[2.5vh] md:text-[1.2vw] tracking-wider">

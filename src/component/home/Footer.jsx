@@ -4,6 +4,9 @@ import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="w-full bg-transparent border-t border-white/10 backdrop-blur-lg relative">
+
+      
+
       <div className=" mx-auto px-[4vw] py-[8vh] md:py-[10vh] grid grid-cols-1 md:grid-cols-3 gap-[5vh] md:gap-[3vw]">
         
         {/* Brand / About */}

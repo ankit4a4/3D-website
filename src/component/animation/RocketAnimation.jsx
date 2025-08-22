@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Lottie from "lottie-react";
-import rocketAnimation from "../animation/Rocket launch animation _Space exploration.json";
+import rocketAnimation from "../animation/Simple Rocket.json";
 
 export default function RocketAnimation() {
   const rocketRef = useRef(null);
@@ -63,7 +63,7 @@ export default function RocketAnimation() {
           animationData={rocketAnimation}
           loop={true}
           autoplay={true}
-          style={{ width: "40vh", height: "40vh" , transform : "rotate(45deg)" }}
+          style={{ width: "50vh", height: "50vh" , transform : "rotate(90deg)" }}
         />
       </div>
     </section>

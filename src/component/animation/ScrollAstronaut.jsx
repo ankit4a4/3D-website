@@ -23,8 +23,8 @@ export default function ScrollAstronaut() {
 
     // Animate to top-left beyond screen (diagonal float)
     gsap.to(astronaut, {
-      x: -window.innerWidth * 0.8, // left beyond screen by 20% width
-      y: -window.innerHeight * 1.3, // top beyond screen by 20% height
+      x: -window.innerWidth * 1.1, // left beyond screen by 20% width
+      y: -window.innerHeight * 1.7, // top beyond screen by 20% height
       ease: "power1.out",
       scrollTrigger: {
         trigger: section,

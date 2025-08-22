@@ -9,6 +9,7 @@ import Testimonials from "./component/home/Testimonials";
 import Contact from "./component/home/Contact";
 import Footer from "./component/home/Footer";
 import Hero from "./component/home/HeroSection";
+import ScrollZoomHeart from "./component/animation/ScrollZoomHeart";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <AboutUs />
       <Services />
       <Portfolio />
+      <ScrollZoomHeart />
       <Testimonials />
       <Contact />
       <Footer />

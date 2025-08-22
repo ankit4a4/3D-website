@@ -1,7 +1,5 @@
 "use client";
 import { TrendingUp, Share2 } from "lucide-react";
-import Lottie from "lottie-react";
-import portfolioAnimation from "../animation/Space walker boy.json"; // yaha apna JSON animation ka path dein
 
 export default function Portfolio() {
   const projects = [
@@ -45,14 +43,7 @@ export default function Portfolio() {
       className="w-full min-h-screen px-[4vw] py-[10vh] md:py-[12vh] relative"
     >
       {/* Lottie Background */}
-      <div className="absolute inset-0">
-        <Lottie
-          animationData={portfolioAnimation}
-          loop={true}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60"></div> {/* Overlay */}
-      </div>
+     
 
       {/* Section Content */}
       <div className="relative z-10">
